@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reset your password{% endblock %}
+
+{% block body %}
+    <section class="bg-primary">
+        <div class="container">
+            <div class="page-title text-white text-center">
+                <h2 data-animate="fadeInUp" data-delay="1.2">Réinitialiser mon mot de passe</h2>
+                <ul class="list-inline" data-animate="fadeInUp" data-delay="1.4">
+                    <li>
+                        <a href="{{ path('app_home') }}"><i class="fa fa-home"></i>Accueil</a>
+                    </li>
+                    <li>/</li>
+                    <li>
+                        <a href="#">Réinitialiser mon mot de passe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="mx-auto col-md-6 col-lg-6 col-6 mt-3 mt-5">
+            {{ form_start(resetForm) }}
+                {{ form_row(resetForm.plainPassword) }}
+                <button class="btn btn-primary btn-block">Réinitialiser</button>
+            {{ form_end(resetForm) }}
+        </div>
+        <br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ChangePasswordController!{% endblock %}
+
+{% block body %}
+    <section class="bg-primary">
+        <div class="container">
+            <div class="page-title text-white text-center">
+                <h2 data-animate="fadeInUp" data-delay="1.2">Changer mon mot de passe</h2>
+                <ul class="list-inline" data-animate="fadeInUp" data-delay="1.4">
+                    <li>
+                        <a href="{{ path('app_home') }}"><i class="fa fa-home"></i>Accueil</a>
+                    </li>
+                    <li>/</li>
+                    <li>
+                        <a href="#">Changer mon mot de passe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="mx-auto col-md-6 col-lg-6 col-6 mt-5 mb-5">
+                {{ form_start(UpdatePasswordForm) }}
+                    {{ form_row(UpdatePasswordForm.oldPassword) }}
+                    {{ form_row(UpdatePasswordForm.password.first) }}
+                    {{ form_row(UpdatePasswordForm.password.second) }}
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-block">Valider</button>
+                {{ form_end(UpdatePasswordForm) }}
+
+                <br><br>
+        </div>
+    </div>
+{% endblock %}

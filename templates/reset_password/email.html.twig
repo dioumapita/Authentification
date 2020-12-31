@@ -1,0 +1,12 @@
+<h1>Bonjour <b>{{ nom }}</b></h1>
+
+<p>Nous avons entendu que vous avez oublié votre mot de passe. Pas de soucis, ça arrive!</p>
+<p>Cliquez sur le lien ci-dessous pour en créer un nouveau mot de passe </p>
+
+<a href="{{ url('app_reset_password', {token: resetToken.token}) }}" class="btn btn-primary">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
+
+{# <p>This link will expire in {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p> #}
+
+<p>À votre santé!<br>
+Vos amis chez Whyinfos
+</p>

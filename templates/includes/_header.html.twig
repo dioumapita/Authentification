@@ -1,0 +1,36 @@
+<header class="header">
+    <div class="header-container header-style-three bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-3 col-sm-5 col-9">
+                    <div class="logo" data-animate="fadeInDown" data-delay=".5">
+                        <a href="index.html">
+                        </a>
+					</div>
+                </div>
+                <div class="col-xl-7 col-lg-8 col-md-6 col-sm-3 col-3"> 
+                    <nav data-animate="fadeInDown" data-delay=".75">
+                        <div class='header-menu'>
+                            <ul>
+                                <li><a href='{{ path('app_home') }}'>Accueil</a></li>
+                                
+                                {% if app.user %}
+                                    <li><a href='{{ path('app_logout') }}'>Déconnexion</a></li>
+                                {% else %}
+                                    <li><a href='{{ path('app_login') }}'>Connexion</a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div align"left">
+                    {% if app.user %}
+                         <a class="btn btn-primary" href="{{ path('app_profil') }}">Mon profil</a>
+                    {% else %}
+                         <a class="btn btn-primary" href="{{ path('app_register') }}">Créer un compte</a>
+                    {% endif %}  
+                </div>
+		    </div>
+		</div>
+	</div>
+</header>
